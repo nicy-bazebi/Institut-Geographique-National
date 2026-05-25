@@ -1,0 +1,43 @@
+Description 
+Cette couche représente les limites administratives des départements de la République du Congo. Conformément à la loi n°3-2003 du 17 janvier 2003 fixant l’organisation administrative du territoire, le département constitue la première subdivision administrative du pays. Il est composé d’un ensemble de districts et de communes.
+Le présent découpage administratif est conforme aux textes législatifs et réglementaires suivants :
+• Loi n° 25-2024 (création du département du Djoué-Léfini) 
+• Loi n° 26-2024 (création du département de la Nkéni-Alima) 
+• Loi n° 27-2024 (création du département du Congo-Oubangui) 
+• Loi n° 29-2024 (redéfinition du ressort territorial du département de Brazzaville) 
+• Loi n° 30-2024 (redéfinition du ressort territorial du département de la Cuvette) 
+• Loi n° 31-2024 (redéfinition du ressort territorial du département de la Likouala) 
+• Loi n° 32-2024 (redéfinition du ressort territorial du département des Plateaux) 
+• Loi n° 33-2024 (redéfinition du ressort territorial du département du Pool) 
+• Loi n° 34-2024 (redéfinition du ressort territorial du district de Ngabé)
+
+----------------------------------------------------------------
+
+Source
+• Textes officiels de délimitation : Ministère de l’Intérieur et de la Décentralisation (MID)
+• Numérisation cartographique sur le fond de la carte topographique du Congo au 1 : 200 000 (Geoconsult, 2015) : Institut Géographique National (IGN)
+• Données démographiques : RGPH-5 (2023), Institut National de la Statistique (INS)
+
+-----------------------------------------------------------------
+
+Structure attributaire
+• Département  : Nom du département	
+• Superficie   : Superficie SIG du département (km²)
+• Population   : Population redistribuée à partir du RGPH-5 (2023) selon le nouveau découpage administratif
+• Densité	     : Densité de population exprimée en habitants/km²
+
+-----------------------------------------------------------------
+
+Échelle : 1 : 200 000
+
+-----------------------------------------------------------------
+
+Système de référence : WGS84 / EPSG : 4326
+
+-----------------------------------------------------------------
+
+Contact : Institut Géographique National (IGN), avenue de l'UA, place du marché Total
+
+-----------------------------------------------------------------
+
+Licence d’utilisation (CC BY-ND 4.0)
