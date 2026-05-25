@@ -73,27 +73,11 @@
       width: 68px;
       height: 68px;
       border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
+      object-fit: contain;
+      background: var(--blanc);
+      padding: 6px;
       box-shadow: 0 10px 26px rgba(11, 61, 46, 0.18);
       flex: 0 0 auto;
-    }
-
-    .emblem {
-      background: linear-gradient(135deg, var(--or), #f3d46b);
-      color: #352500;
-      font-size: 0.78rem;
-      text-align: center;
-      line-height: 1.2;
-    }
-
-    .logo {
-      background: linear-gradient(135deg, var(--vert-fonce), var(--vert));
-      color: var(--blanc);
-      letter-spacing: 1px;
-      font-size: 1.15rem;
     }
 
     .brand-title h1 {
@@ -215,18 +199,16 @@
       height: 255px;
       border-radius: 20px;
       margin-bottom: 22px;
-      background:
-        linear-gradient(135deg, rgba(214,162,30,0.75), rgba(20,107,79,0.9)),
-        repeating-linear-gradient(45deg, rgba(255,255,255,0.18) 0 1px, transparent 1px 18px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 24px;
-      color: var(--blanc);
-      font-weight: 900;
-      font-size: 1.35rem;
-      line-height: 1.25;
+      background: rgba(255,255,255,0.12);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.24);
+    }
+
+    .map-mini img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .hero-meta {
@@ -352,18 +334,17 @@
     .congo-shape {
       min-height: 260px;
       border-radius: 24px;
-      background:
-        linear-gradient(140deg, rgba(11,61,46,0.96), rgba(20,107,79,0.78)),
-        repeating-linear-gradient(90deg, rgba(255,255,255,0.08) 0 1px, transparent 1px 28px);
-      color: var(--blanc);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      font-size: 1.35rem;
-      font-weight: 900;
-      line-height: 1.25;
+      background: var(--vert-clair);
+      overflow: hidden;
+      border: 1px solid var(--bordure);
+    }
+
+    .congo-shape img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      display: block;
     }
 
     .info-list {
@@ -629,7 +610,6 @@
         width: 54px;
         height: 54px;
         border-radius: 14px;
-        font-size: 0.72rem;
       }
 
       .hero-grid,
@@ -691,7 +671,7 @@
   <header>
     <div class="brand">
       <img class="emblem" src="assets/armoiries_rc.png" alt="Armoiries de la République du Congo" />
-      <img class="logo" src="
+      <img class="logo" src="assets/logo_ign.png" alt="Logo de l’Institut Géographique National" />
       <div class="brand-title">
         <h1>Portail officiel de diffusion des données administratives</h1>
         <p>République du Congo — Institut Géographique National</p>
@@ -715,13 +695,15 @@
             Le découpage administratif actualisé de la République du Congo constitue le référentiel administratif officiel validé par les institutions compétentes de l’État.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#conditions">Télécharger les conditions d’utilisation</a>
+            <a class="btn btn-primary" href="conditions/CONDITIONS_UTILISATION_RC_V2026_03.pdf" target="_blank" rel="noopener">Télécharger les conditions d’utilisation</a>
             <a class="btn btn-secondary" href="#demande">Faire une demande d’accès</a>
           </div>
         </div>
 
         <aside class="hero-card">
-          <div class="map-mini">Aperçu cartographique<br />15 départements</div>
+          <div class="map-mini">
+            <img src="assets/apercu_carte.jpg" alt="Aperçu de la carte administrative actualisée de la République du Congo" />
+          </div>
           <div class="hero-meta">
             <div><span>Version officielle</span><strong>Mars 2026</strong></div>
             <div><span>Format disponible</span><strong>Shapefile (.shp)</strong></div>
@@ -743,9 +725,11 @@
 
         <div class="presentation-grid">
           <div class="illustration">
-            <div class="congo-shape">Carte schématique<br />République du Congo<br />Découpage départemental</div>
+            <div class="congo-shape">
+              <img src="assets/apercu_carte.jpg" alt="Carte administrative actualisée de la République du Congo" />
+            </div>
             <p style="color: var(--gris);">
-              Espace réservé à une carte miniature, une image de la carte officielle ou une capture du visualiseur cartographique.
+              Aperçu de la carte administrative actualisée de la République du Congo.
             </p>
           </div>
 
@@ -800,7 +784,8 @@
             </div>
             <div class="download-body">
               <div class="dataset-meta">
-                <div class="meta-box"><span>Taille du fichier</span><strong>À renseigner</strong></div>
+                <div class="meta-box"><span>Taille du fichier</span><strong>À renseigner après dépôt du ZIP</strong></div>
+                <div class="meta-box"><span>Métadonnées</span><strong><a href="metadata/METADONNEES_RC_V2026_03.txt" target="_blank" rel="noopener">Consulter</a></strong></div>
                 <div class="meta-box"><span>Date de mise à jour</span><strong>Mars 2026</strong></div>
                 <div class="meta-box"><span>Version</span><strong>Officielle 2026.03</strong></div>
                 <div class="meta-box"><span>Format</span><strong>ZIP / Shapefile</strong></div>
@@ -814,7 +799,7 @@
                 <li>Aperçu cartographique PDF</li>
               </ul>
 
-              <a class="btn btn-dark" href="#demande">Accéder aux données</a>
+              <a class="btn btn-dark" href="data/DECOUPAGE_ADMINISTRATIF_RC_V2026_03.zip" download>Télécharger le fichier ZIP</a>
               <div class="notice">
                 La mise à disposition des données est soumise à une demande adressée à l’Institut Géographique National. Le téléchargement et l’utilisation impliquent l’acceptation des conditions d’utilisation.
               </div>
@@ -872,7 +857,7 @@
         </div>
 
         <div style="margin-top: 28px;">
-          <a class="btn btn-dark" href="#">Lire les conditions complètes</a>
+          <a class="btn btn-dark" href="conditions/CONDITIONS_UTILISATION_RC_V2026_03.pdf" target="_blank" rel="noopener">Lire les conditions complètes</a>
         </div>
       </div>
     </section>
@@ -888,7 +873,7 @@
         </div>
 
         <div class="form-grid">
-          <form>
+          <form action="mailto:contact@ign.cg" method="post" enctype="text/plain">
             <div class="form-group">
               <label for="nom">Nom et prénom</label>
               <input id="nom" name="nom" type="text" placeholder="Votre nom complet" />
@@ -905,7 +890,7 @@
               <label for="objet">Objet de l’utilisation</label>
               <textarea id="objet" name="objet" placeholder="Décrivez brièvement l’usage prévu des données"></textarea>
             </div>
-            <button class="btn btn-dark" type="submit">Soumettre la demande</button>
+            <button class="btn btn-dark" type="submit">Envoyer la demande à l’IGN</button>
             <p class="small-note">
               Le téléchargement, la réception ou l’utilisation des données implique l’acceptation pleine et entière des conditions d’utilisation associées.
             </p>
@@ -926,7 +911,7 @@
               <div><strong>Traçabilité</strong><p>La demande permet de conserver une trace des bénéficiaires et des usages déclarés.</p></div>
             </div>
             <div class="notice">
-              Dans Squarespace, ce formulaire peut être relié à votre adresse email, à Google Drive, ou à une feuille Google Sheets pour archiver automatiquement les demandes.
+              Sur GitHub Pages, ce formulaire ouvre le logiciel de messagerie de l’utilisateur afin d’envoyer la demande à l’IGN. Pour un formulaire plus automatisé, il pourra être relié plus tard à un service externe comme Formspree, Google Forms ou un formulaire institutionnel.
             </div>
           </div>
         </div>
